@@ -43,22 +43,62 @@
 						<h2>Marissa</h2>
 						<!-- Word documents and functionality for Marissa will go here -->
 						<span>Testing, testing!</span>
-					  </section>
-					  
-					  <section id="chandler" class="section">
+
+						<!-- Add this within the Marissa section -->
+						<div id="marissaDocuments" class="documents">
+							<!-- Uploaded documents will be displayed here -->
+						</div>
+						
+						<input type="file" id="marissaUpload" accept=".doc,.docx" />
+						<button onclick="uploadDocument('marissa')">Upload</button>
+						<button onclick="deleteDocument('marissa', docId)">Delete</button>
+						<button onclick="acknowledgeReceipt('marissa', docId)">Acknowledge Receipt</button>
+					</section>
+					
+					<section id="chandler" class="section">
 						<h2>Chandler</h2>
 						<!-- Word documents and functionality for Chandler will go here -->
-					  </section>
-					  
-					  <section id="briana" class="section">
+
+						<!-- Add this within the Marissa section -->
+						<div id="chandlerDocuments" class="documents">
+							<!-- Uploaded documents will be displayed here -->
+						</div>
+						
+						<input type="file" id="chandlerUpload" accept=".doc,.docx" />
+						<button onclick="uploadDocument('chandler')">Upload</button>
+						<button onclick="deleteDocument('chandler', docId)">Delete</button>
+						<button onclick="acknowledgeReceipt('chandler', docId)">Acknowledge Receipt</button>
+					</section>
+					
+					<section id="briana" class="section">
 						<h2>Briana</h2>
 						<!-- Word documents and functionality for Briana will go here -->
-					  </section>
-					  
-					  <section id="evan" class="section">
+
+						<!-- Add this within the Marissa section -->
+						<div id="brianaDocuments" class="documents">
+							<!-- Uploaded documents will be displayed here -->
+						</div>
+						
+						<input type="file" id="brianaUpload" accept=".doc,.docx" />
+						<button onclick="uploadDocument('briana')">Upload</button>
+						<button onclick="deleteDocument('briana', docId)">Delete</button>
+						<button onclick="acknowledgeReceipt('briana', docId)">Acknowledge Receipt</button>
+					</section>
+					
+					<section id="evan" class="section">
 						<h2>Evan</h2>
 						<!-- Word documents and functionality for Evan will go here -->
-					  </section>
+
+						<!-- Add this within the Marissa section -->
+						<div id="evanDocuments" class="documents">
+							<!-- Uploaded documents will be displayed here -->
+						</div>
+						
+						<input type="file" id="evanUpload" accept=".doc,.docx" />
+						<button onclick="uploadDocument('evan')">Upload</button>
+						<button onclick="deleteDocument('evan', docId)">Delete</button>
+						<button onclick="acknowledgeReceipt('evan', docId)">Acknowledge Receipt</button>
+					</section>
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -69,6 +109,24 @@
 			</div>
 		</div>
 		<script>
+			// Initialize Firebase and add your configuration here
+		
+			function uploadDocument(person) {
+			// Upload the selected document to Firebase Storage
+			// Save the document details (name, URL, timestamp) in Firebase Realtime Database
+			// Display the uploaded document in the corresponding section
+			}
+		
+			function deleteDocument(person, docId) {
+			// Delete the document from Firebase Storage
+			// Remove the document details from Firebase Realtime Database
+			// Remove the document from the corresponding section
+			}
+		
+			function acknowledgeReceipt(person, docId) {
+			// Update the document details in Firebase Realtime Database with the acknowledgement timestamp
+			// Update the document in the corresponding section with the timestamp
+			}
 			window.onload = function() { document.body.classList.remove('is-preload'); }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
